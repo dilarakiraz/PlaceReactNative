@@ -20,7 +20,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "package":"com.dilarakiraz.place",
+        "googleMapsApiKey":"AIzaSyDALHJ2wczms-qP7NbN6RrDtoN6g9XHo58"
       }
     },
     "web": {
