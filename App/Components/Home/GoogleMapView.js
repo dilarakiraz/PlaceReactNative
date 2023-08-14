@@ -23,7 +23,8 @@ export default function GoogleMapView() {
         <View style={{ marginTop: 20 }}>
             <Text style={{
                 fontSize: 20,
-                marginBottom: 10, fontWeight: "600"
+                marginBottom: 10, fontWeight: "600",
+                fontFamily:'raleway-bold'
             }}>
                 Top Near By Places
             </Text>
