@@ -1,30 +1,32 @@
 import { View, Text, Dimensions } from 'react-native'
 import React, { useContext, useEffect, useState } from 'react'
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { UserLocationContext } from '../../Context/UserLocationContext'
 
 export default function GoogleMapView() {
 
     const [mapRegion, setMapRegion] = useState([]);
-    const { location, setLocation } = useContext(UserLocationContext)
+    const { location, setLocation } = useContext(UserLocationContext);
+    console.log("location",location)
 
     useEffect(() => {
-        if (location) {
+         if (location) {
             setMapRegion({
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
-                latitudeDelta: 0.0322,
+                latitudeDelta: 0.022,
                 longitudeDelta: 0.0421,
             })
-        }
-    }, [])
+          
+         }
+    }, [location])
 
     return (
-        <View style={{ marginTop: 20 }}>
+        <View style={{ marginTop: 20}}>
             <Text style={{
                 fontSize: 20,
                 marginBottom: 10, fontWeight: "600",
-                fontFamily:'raleway-bold'
+                
             }}>
                 Top Near By Places
             </Text>
@@ -36,6 +38,12 @@ export default function GoogleMapView() {
                 provider={PROVIDER_GOOGLE}
                 showsUserLocation={true}
                 region={mapRegion}>
+                    
+                    {location &&<Marker title='You'
+                    coordinate={{
+                        latitude: location.coords.latitude, 
+                        longitude: location.coords.longitude,
+                    }} />}
 
             </MapView>
         </View >
