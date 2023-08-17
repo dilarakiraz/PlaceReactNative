@@ -7,9 +7,7 @@ import GlobalApi from '../Services/GlobalApi'
 import PlaceList from '../Components/Home/PlaceList'
 
 
-//API=  AIzaSyDALHJ2wczms-qP7NbN6RrDtoN6g9XHo58
 
-//apı_keyyou= "AIzaSyAlIDUiTW6M9p6qb7mHsMCvqk0_OMO3MV0"
 export default function Home() {
 
   const [placeList, setPlaceList] = useState([]);
