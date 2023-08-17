@@ -5,8 +5,7 @@ const API_KEY = "AIzaSyDALHJ2wczms-qP7NbN6RrDtoN6g9XHo58"
 
 const nearByPlace = (lat, lng, type) => axios.get(BASE_URL +
     "/nearbysearch/json?" +
-    "&location=" + lat + "," + lng + "&radius=1500&type=" + type
-    + "&key=" + API_KEY)
+    "&location=" + lat + "," + lng + "&radius=1500&type=" + type+ "&key=" + API_KEY)
 
 export default {
     nearByPlace

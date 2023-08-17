@@ -9,8 +9,10 @@ export default function PlaceList({placeList}) {
 
       <FlatList
       data={placeList}
-      renderItem={({item})=>(
+      renderItem={({item,index})=>(
+        index%4==0?
         <PlaceItem place={item}/>
+        :<PlaceItem place={item}/>
       )}
       >
 
